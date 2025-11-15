@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Beyond Limits | Futuristic Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+    
+    <!-- Particle Canvas Overlay -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">NEXUS</span>
+                <span class="logo-pulse"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Innovate</span>
+                <span class="title-line">Beyond</span>
+                <span class="title-line gradient-text">Limits</span>
+            </h1>
+            <p class="hero-subtitle">Experience the future of technology with immersive 3D interactions</p>
+            <div class="hero-buttons">
+                <button class="primary-btn">Explore Now</button>
+                <button class="secondary-btn">Watch Demo</button>
+            </div>
+        </div>
+        
+        <!-- Floating Stats -->
+        <div class="floating-stats">
+            <div class="stat-card glass-panel">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime</div>
+            </div>
+            <div class="stat-card glass-panel">
+                <div class="stat-number">10M+</div>
+                <div class="stat-label">Users</div>
+            </div>
+            <div class="stat-card glass-panel">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Countries</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2 class="section-title">Revolutionary Features</h2>
+            <p class="section-subtitle">Powered by cutting-edge technology</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card glass-panel" data-feature="1">
+                <div class="feature-icon">
+                    <div class="icon-shape cube"></div>
+                </div>
+                <h3 class="feature-title">Quantum Processing</h3>
+                <p class="feature-description">Harness the power of quantum computing for unprecedented speed and efficiency</p>
+            </div>
+            
+            <div class="feature-card glass-panel" data-feature="2">
+                <div class="feature-icon">
+                    <div class="icon-shape sphere"></div>
+                </div>
+                <h3 class="feature-title">Neural Networks</h3>
+                <p class="feature-description">AI-powered systems that learn and adapt to your unique needs</p>
+            </div>
+            
+            <div class="feature-card glass-panel" data-feature="3">
+                <div class="feature-icon">
+                    <div class="icon-shape pyramid"></div>
+                </div>
+                <h3 class="feature-title">Holographic Interface</h3>
+                <p class="feature-description">Interact with data in stunning 3D holographic projections</p>
+            </div>
+            
+            <div class="feature-card glass-panel" data-feature="4">
+                <div class="feature-icon">
+                    <div class="icon-shape torus"></div>
+                </div>
+                <h3 class="feature-title">Infinite Scalability</h3>
+                <p class="feature-description">Seamlessly scale from startup to enterprise without limits</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology-section">
+        <div class="tech-container">
+            <div class="tech-content glass-panel">
+                <h2 class="tech-title">Next-Gen Architecture</h2>
+                <p class="tech-description">Built on a foundation of advanced technologies that push the boundaries of what's possible</p>
+                <ul class="tech-list">
+                    <li class="tech-item">
+                        <span class="tech-bullet"></span>
+                        <span>Distributed Cloud Infrastructure</span>
+                    </li>
+                    <li class="tech-item">
+                        <span class="tech-bullet"></span>
+                        <span>Real-time Data Synchronization</span>
+                    </li>
+                    <li class="tech-item">
+                        <span class="tech-bullet"></span>
+                        <span>End-to-End Encryption</span>
+                    </li>
+                    <li class="tech-item">
+                        <span class="tech-bullet"></span>
+                        <span>Blockchain Integration</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="globe-container" class="globe-container">
+                <!-- Holographic globe will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-content glass-panel">
+            <h2 class="contact-title">Ready to Transform?</h2>
+            <p class="contact-subtitle">Join thousands of innovators already using our platform</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Enter your email" class="email-input">
+                <button type="submit" class="submit-btn">Start Free Trial</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 NEXUS. Innovating the future, today.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-text">Loading Experience...</div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "/node_modules/three/build/three.module.js",
+            "three/addons/": "/node_modules/three/examples/jsm/"
+        }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/particles.js"></script>
+    <script type="module" src="/js/globe.js"></script>
+    <script src="/js/animations.js"></script>
+</body>
+</html>

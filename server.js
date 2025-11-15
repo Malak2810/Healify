@@ -2,6 +2,7 @@
 const express = require("express")
 const connectToDatabase = require("./config/db.config")
 const cors = require("cors")
+const path = require("path")
 
 
 const app = express()
@@ -22,16 +23,15 @@ app.use(express.urlencoded({ extended: true }));
 // Na3mlou connexion lil database
 connectToDatabase()
 
-// Simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to application." });
-});
-
-// Na3mlou import lil routes
+// API routes (must be before static files to take precedence)
 require("./routes/auth.routes")(app)
 require("./routes/patient.routes")(app)
 require("./routes/medecin.routes")(app)
 require("./routes/admin.routes")(app)
+
+// Serve static files from public directory and node_modules
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
 // Na3mlou configuration mta3 port
 const PORT = process.env.PORT || 8080
