@@ -1,0 +1,121 @@
+/* Appointment card */
+.appointment-card {
+  display: flex;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Colored stripe for status */
+.status-stripe {
+  width: 5px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Appointment content container */
+.appointment-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  flex: 1;
+  gap: 1rem;
+}
+
+/* Left side: patient info */
+.appointment-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.patient-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.appointment-specialty {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Right side: appointment info */
+.appointment-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+/* Status badge */
+.status-badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+/* Quick action button */
+.quick-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0b2b63;
+  transition: all 0.2s ease;
+}
+
+.quick-button:hover { background: #f1f5f9; }
+
+/* Main grid layout */
+.doctor-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .doctor-main-grid { grid-template-columns: 1fr; }
+}
+
+/* Today's appointments card */
+.todays-appointments-card {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #f9fafb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.todays-appointments-card .card-header {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.todays-appointments-card .card-header a {
+  font-size: 0.875rem;
+  color: #3b82f6;
+  text-decoration: none;
+}
+.todays-appointments-card .card-header a:hover {
+  text-decoration: underline;
+}

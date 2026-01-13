@@ -1,0 +1,183 @@
+/* PatientDashboard.css */
+
+/* Container */
+.dashboard-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f0f4ff, #e0f0ff);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(to right, #dbeafe, #eef2ff, #dbeafe);
+  border: 1px solid #cbd5e1;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1e3a8a;
+}
+
+.dashboard-header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 1rem;
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+.stat-card .stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #eff6ff;
+  margin-left: auto;
+}
+
+.stat-card h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.stat-card .stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0.5rem 0;
+}
+
+.stat-card .stat-subtitle {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Cards */
+.card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Quick Action Buttons */
+.card a.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 0;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.card a.primary {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+.card a.primary:hover {
+  opacity: 0.9;
+}
+
+.card a.outline {
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+}
+
+.card a.outline:hover {
+  background: #f1f5f9;
+}
+
+/* Recent Activity */
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: #f1f5f9;
+  transition: background 0.3s ease;
+}
+
+.activity-item:hover {
+  background: #e2e8f0;
+}
+
+.activity-item p {
+  margin: 0;
+}
+
+.activity-item .activity-date {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Quick Actions + Find Doctor Grid */
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Ensure cards have equal height */
+.card.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
